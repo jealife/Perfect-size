@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Découvrez Logich, votre partenaire pour des solutions innovantes.">
+    <meta name="keywords" content="Logich, solutions, innovation, technologie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Logich - Solutions Innovantes</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Logich - Votre Partenaire pour l'Innovation">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1661115111405-981a08256178?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-100">
+    <!-- Navigation Bar with Dropdown -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-2xl font-bold text-blue-600">
+                    <a href="/">Logich</a>
+                </div>
+                <!-- Menu Links (Desktop) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#hero" class="text-gray-700 hover:text-blue-600 transition">Accueil</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">À propos</a>
+                    <!-- Dropdown Menu -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-600 transition flex items-center">
+                            Services
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 w-48 z-10">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Service 1</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Service 2</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Service 3</a>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <!-- Hamburger Menu (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
+                <a href="#hero" class="block text-gray-700 hover:text-blue-600 transition">Accueil</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 transition">À propos</a>
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button id="mobile-services-toggle" class="text-gray-700 hover:text-blue-600 transition flex items-center">
+                        Services
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-services-menu" class="hidden mt-2 space-y-2">
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Service 1</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Service 2</a>
+                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Service 3</a>
+                    </div>
+                </div>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="text-white grid place-content-center h-[80vh] sm:h-[95vh]bg-center bg-cover bg-no-repeat bg-fixed bg-[url(https://images.unsplash.com/photo-1661115111405-981a08256178?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
+                Bienvenue sur notre site
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Découvrez notre mission et connectez-vous avec nous dès aujourd'hui.
+            </p>
+            <a href="#contact" class="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">
+                Contactez-nous
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section with Cards -->
+    <section id="about" class="py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">À propos de nous</h2>
+            <p class="text-base sm:text-lg leading-relaxed mb-6 max-w-3xl mx-auto text-center">
+                Nous sommes une équipe passionnée dédiée à créer des solutions innovantes. Notre mission est de rendre la technologie accessible à tous.
+            </p>
+            <!-- Card Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Jean Dupont</h3>
+                    <p class="text-sm text-gray-600">Fondateur</p>
+                    <p class="text-base text-gray-700 mt-2">Passionné par l'innovation et la technologie.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Marie Martin</h3>
+                    <p class="text-sm text-gray-600">Designer</p>
+                    <p class="text-base text-gray-700 mt-2">Crée des interfaces utilisateur intuitives.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1635505602641-b066ea01902f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Paul Lefèvre</h3>
+                    <p class="text-sm text-gray-600">Développeur</p>
+                    <p class="text-base text-gray-700 mt-2">Expert en solutions web modernes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Modal -->
+    <section id="contact" class="bg-white py-16 sm:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8">Contactez-nous</h2>
+            <form id="contact-form" class="max-w-lg mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
+                    <input type="text" id="name" class="mt-1 w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" class="mt-1 w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" rows="4" class="mt-1 w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition">
+                    Envoyer
+                </button>
+            </form>
+        </div>
+        <!-- Modal (Hidden by default) -->
+        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-white rounded-lg p-6 max-w-md w-full">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Message envoyé !</h3>
+                <p class="text-base text-gray-700 mb-6">Merci pour votre message. Nous vous répondrons bientôt.</p>
+                <button id="close-modal" class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-base">©️ 2025 Votre Site. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript pour le menu hamburger, dropdown mobile, et modal -->
+    <script>
+        // Menu Hamburger
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile Dropdown
+        const servicesToggle = document.getElementById('mobile-services-toggle');
+        const servicesMenu = document.getElementById('mobile-services-menu');
+        servicesToggle.addEventListener('click', () => {
+            servicesMenu.classList.toggle('hidden');
+        });
+
+        // Modal
+        const form = document.getElementById('contact-form');
+        const modal = document.getElementById('modal');
+        const closeModal = document.getElementById('close-modal');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            modal.classList.remove('hidden');
+            form.reset();
+        });
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
